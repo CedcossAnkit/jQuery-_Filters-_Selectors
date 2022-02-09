@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form">
+        <div id="head">
+            <h1>jQuery - Filters & Selectors</h1>
+        </div>
+        <div id="header">
+            <!-- <button id="bt">Search</button> -->
+            <input type="search" name="" id="srch" placeholder="Name or ID "><br>
+            <label for="" id="msg">Press Enter if auto Search is not working</label>
+
+            <!-- //brand -->
+            <div class="dropdown" style="float:left;">
+                <button class="dropbtn">brand</button>
+                <div class="dropdown-content" style="left:0;"  id="content1"> 
+                <a href="#" id="all">All Brands</a>
+                <a href="#" id="apple">Apple</a>
+                <a href="#" id="motorola">Motorola</a>
+                <a href="#" id="sumsung">Sumsung</a>
+                <a href="#" id="asus">Asus</a>
+                <a href="#" id="microsoft">Microsoft</a>
+
+                </div>
+              </div>
+
+              <div class="dropdown" style="float:left; margin-left: 90px; top:-20px">
+                <button class="dropbtn">OS</button>
+                <div class="dropdown-content" id="content2">
+                <a href="#" id="allos">All OS</a>
+                <a href="#" id="ios">iOS</a>
+                <a href="#" id="android">Android</a>
+                <a href="#" id="windows">Windows</a>
+                </div>
+              </div>
+
+
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Operating System</th>
+                <th>Hide</th>
+            </tr>
+            <tbody id="table"></tbody>
+            
+        </table>
+    </div>
+</body>
+</html>
