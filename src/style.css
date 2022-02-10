@@ -1,9 +1,9 @@
 table, tr, th,td{
     border: 2px solid rgb(226, 21, 134);
     border-collapse: collapse;
-    margin-top: 100px;
+    margin-top: 10px;
     text-align: center;
-    padding: 7px 14px;
+    padding: 7px 10px;
     box-shadow: 1px 1px 15px 1px green;
 
 }
@@ -16,8 +16,8 @@ td{
 #form{
     border: 1px solid rgb(96, 123, 245);
     margin: auto;
-    width: 27rem;
-    padding: 50px 30px;
+    width: 36rem;
+    padding: 30px 50px;
     background:lightpink;
     
 }
@@ -44,12 +44,14 @@ button{
     font-size: 16px;
     border: none;
     cursor: pointer;
+  
   }
   
   .dropdown {
     position: relative;
     display: inline-block;
-    left: -10px;
+    left: 0px;
+    top:-30px
   }
   
   .dropdown-content {
@@ -88,7 +90,15 @@ button{
     left: 0px;
     top: 20px;
 }
+#contianer h3{
+  color: rgb(77, 71, 71);
+  letter-spacing: 2px;
 
+}
+
+#contianer{
+  border: 1px solid green;
+}
 *{
     font-family: sans-serif !important;
 }
@@ -96,4 +106,31 @@ button{
 #head h1{
     font-size: 20px;
     color: rgb(17, 90, 17);
+}
+
+#cart{
+  border: 1px solid red;
+  position: relative;
+  float: left;
+  width: 200px;
+  margin:auto;
+  top:50px;
+  font-family: sans-serif;
+  border-left-color: transparent;
+  border-right-color: transparent;
+
+ 
+}
+#cart :hover{
+  background: lightskyblue;
+}
+
+#cart h2{
+  color: lightcoral;
+}
+#cart li{
+  color: green;
+  margin-left:20px;
+  margin-top: 10px;
+  letter-spacing: 2px;
 }

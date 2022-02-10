@@ -95,6 +95,7 @@ $(document).ready(function () {
     $('#apple').click(function (e) { 
         brandd="apple";
         filter(brandd,oss);
+    
         
     });
     $('#motorola').click(function (e) { 
@@ -158,8 +159,9 @@ $(document).ready(function () {
         
         var main=""
         var b=0;
+        var a="";
         for(var i=0;i<products.length;i++){
-            if(brandd.toLowerCase()==products[i].brand.toLowerCase() || oss.toLowerCase()==products[i].os.toLowerCase()){
+            if(brandd.toLowerCase()==products[i].brand.toLowerCase() && oss.toLowerCase()==products[i].os.toLowerCase()){
                 main+= "<tr id='"+b+"'>\
                \<td>"+products[i].id+"</td>\
                <td>"+products[i].name+"</td>\
@@ -168,6 +170,10 @@ $(document).ready(function () {
                <td><u><button class='bt' onclick='fun("+b+")'>Hide</button></u></td>\
                <td><u><button>add to cart</button></u></td>\
                </tr>"
+               a="";
+            }
+            else{
+                
             }
         }
         $('#table').html(main);
@@ -176,7 +182,7 @@ $(document).ready(function () {
 
     //add to cart code
 
-    
+
     
 });
 
