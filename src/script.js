@@ -1,5 +1,9 @@
+var brandd="";
+var oss="";
 $(document).ready(function () {
     // console.log('Working..')
+
+    
     var products = [{
         "id": "100",
         "name": "iPhone 4S",
@@ -46,7 +50,8 @@ $(document).ready(function () {
             <td>"+products[i].name+"</td>\
             <td>"+products[i].brand+"</td>\
             <td>"+products[i].os+"</td>\
-            <td><u><a onclick='fun("+b+")'>Hide</a></u></td>\
+            <td><u><button class='bt' onclick='fun("+b+")'>Hide</button></u></td>\
+            <td><u><button>add to cart</button></u></td>\
             </tr>"
             b++;
         }
@@ -62,7 +67,7 @@ $(document).ready(function () {
         var main1=""; 
         var vl=$('#srch').val().toLowerCase();
         var b=0;
-        if(vl.length>=3){
+        if(vl.length>=2){
         for(var i=0;i<products.length;i++){
             if(vl==products[i].id.toLowerCase() || vl==products[i].name.toLowerCase()){
                main1+= "<tr id='"+b+"'>\
@@ -70,7 +75,8 @@ $(document).ready(function () {
                <td>"+products[i].name+"</td>\
                <td>"+products[i].brand+"</td>\
                <td>"+products[i].os+"</td>\
-               <td><u><a onclick='fun("+b+")'>Hide</a></u></td>\
+               <td><u><button class='bt' onclick='fun("+b+")'>Hide</button></u></td>\
+               <td><u><button>add to cart</button></u></td>\
                </tr>"
                console.log('Searching in loop');
                 b++;
@@ -87,24 +93,32 @@ $(document).ready(function () {
     });
 
     $('#apple').click(function (e) { 
-        var apple="apple";
-        filter(apple);
+        brandd="apple";
+        filter(brandd,oss);
+        
     });
     $('#motorola').click(function (e) { 
-        var apple="motorola";
-        filter(apple);
+        brandd="motorola";
+        filter(brandd,oss);
+
     });
     $('#sumsung').click(function (e) { 
-        var apple="Samsung";
-        filter(apple);
+        brandd="Samsung";
+        filter(brandd,oss);
+
+
     });
     $('#asus').click(function (e) { 
-        var apple="asus";
-        filter(apple);
+        brandd="asus";
+        filter(brandd,oss);
+
+
     });
     $('#microsoft').click(function (e) { 
-        var apple="microsoft";
-        filter(apple);
+        brandd="microsoft";
+        filter(brandd,oss);
+
+
     });
 
     $('#all').click(function (e) { 
@@ -116,42 +130,62 @@ $(document).ready(function () {
         
     });
     $('#ios').click(function (e) {
-        var ios="iOS";
-        filter(ios);
+        oss="iOS";
+        filter(brandd,oss);
+
+
         
     });
     $('#android').click(function (e) {
-        var android="android";
-        filter(android);
+        oss="android";
+        filter(brandd,oss);
+
+
         
     });
     $('#windows').click(function (e) {
-        var android="windows";
-        filter(android);
+        oss="windows";
+        filter(brandd,oss);
+
         
     });
 
 
-    function filter(name){
+
+
+    function filter(brandd,oss){
+        
+        
         var main=""
         var b=0;
         for(var i=0;i<products.length;i++){
-            if(name.toLowerCase()==products[i].brand.toLowerCase() || name.toLowerCase()==products[i].os.toLowerCase()){
+            if(brandd.toLowerCase()==products[i].brand.toLowerCase() || oss.toLowerCase()==products[i].os.toLowerCase()){
                 main+= "<tr id='"+b+"'>\
                \<td>"+products[i].id+"</td>\
                <td>"+products[i].name+"</td>\
                <td>"+products[i].brand+"</td>\
                <td>"+products[i].os+"</td>\
-               <td><u><a onclick='fun("+b+")'>Hide</a></u></td>\
+               <td><u><button class='bt' onclick='fun("+b+")'>Hide</button></u></td>\
+               <td><u><button>add to cart</button></u></td>\
                </tr>"
             }
         }
         $('#table').html(main);
 
     }
+
+    //add to cart code
+
+    
+    
 });
+
 
 function fun(id){
     console.log('clicked');
-    $("#"+id).hide();
+    $("#"+id).css('border','1px solid red');
+    $("#"+id).hide(500);
+    
+
+
 }
