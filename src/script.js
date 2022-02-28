@@ -1,3 +1,5 @@
+
+
 var brandd = "";
 var oss = "";
 var products = [{
@@ -39,6 +41,8 @@ var products = [{
 $(document).ready(function () {
     // console.log('Working..')
     display();
+    dymanicOS();
+    // dynamicbrand();
     function display() {
         var main = "";
         var b = 0;
@@ -238,3 +242,49 @@ function cart(id) {
     $('uu').css('margin-left', '10px');
 }
 
+function dynamicbrand(){
+
+    var htm="";
+    htm+='<div class="dropdown" style="float:left;">\
+    <button class="dropbtn">brand</button>\
+    <div class="dropdown-content" style="left:0;"  id="content1"> \
+    <a href="#" id="all">All Brands</a>\
+    <a href="#" id="apple">Apple</a>\
+    <a href="#" id="motorola">Motorola</a>\
+    <a href="#" id="sumsung">Sumsung</a>\
+    <a href="#" id="asus">Asus</a>\
+    <a href="#" id="microsoft">Microsoft</a>\
+    </div></div>';
+
+    $("#contianer").html(htm);
+}
+
+function dymanicOS(){
+    var chm="";
+    chm='<h3>Filter</h3><br>\
+    <div class="dropdown" style="float:left;">\
+        <button class="dropbtn">brand</button>\
+        <div class="dropdown-content" style="left:0;"  id="content1"> \
+        <a href="#" id="all">All Brands</a>\
+        <a href="#" id="apple">Apple</a>\
+        <a href="#" id="motorola">Motorola</a>\
+        <a href="#" id="sumsung">Sumsung</a>\
+        <a href="#" id="asus">Asus</a>\
+        <a href="#" id="microsoft">Microsoft</a>\
+\
+        </div>\
+      </div>\
+\
+      <div class="dropdown  style="float:left; margin-left: 90px; top:-20px">\
+        <button class="dropbtn dbdown">OS</button>\
+        <div class="dropdown-content" id="content2">\
+        <a href="#" id="allos">All OS</a>\
+        <a href="#" id="ios">iOS</a>\
+        <a href="#" id="android">Android</a>\
+        <a href="#" id="windows">Windows</a>\
+        </div>\
+      </div>\
+    </div>';
+  $("#contianer").html(chm);
+
+}
